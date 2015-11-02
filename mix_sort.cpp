@@ -1,10 +1,17 @@
-//
-//  main.cpp
-//  mix_sort
-//
-//  Created by Shikai Luo on 11/1/15.
-//  Copyright © 2015 Shikai Luo. All rights reserved.
-//
+/*
+从stdin读入一行String，String中同时包括单词和数字，以空格分开。需要将输入进行排序，要求：（1）字母和数字分别顺序排序（2）输入中原本是字母/数字的地方依然是字母/数字。
+
+比如输入：d 3 c 2 1 a 输出为 a 1 c 2 3 d 
+
+        输入：add 6 abb at 输出为 abb 6 add at
+
+
+思路：
+
+由于单词元素和数字元素是以空格分开的，可以将输入的String解析成单个输入元素的list。然后一一判断这些元素是不是数字，如果是的话，标记所在位置，并将该元素加到一个新的叫integers的list中，再将单词加到另一个叫words的list中。分别对这两个list排序后根据之前标记的位置把排序好的值重新填回去。
+*/
+
+
 
 #include <iostream>
 #include <vector> 
